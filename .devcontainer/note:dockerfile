@@ -1,0 +1,54 @@
+## used ros:humble as base image
+
+#installed rqt in the container
+apt install ~nros-humble-rqt*
+
+## need to add the permissions to add the files in /home/ws
+sudo chmod -R user /home/ws 
+
+## installed colcon extensions 
+sudo apt install python3-colcon-common-extensions
+
+## colcon cd
+echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
+echo "export _colcon_cd_root=/opt/ros/humble/" >> ~/.bashrc
+
+## colcon tab completion 
+echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+
+
+## used tor network when rosdep init is not connecting to the network
+
+
+## install ros-humble-rviz2
+sudo apt install ros-humble-rviz2
+
+
+## installing onshape to robot (urdf)
+sudo apt install openscad meshlab
+
+## need to install python3.10-venv before installing onshape-to-robot
+sudo apt install pyhton3.10-venv
+
+##installing onshape-to-robot
+pip install onshape-to-robot
+
+## installing the dependencies for otr
+pip install numpy pybullet requests commentjson colorama numpy-stl
+
+
+
+## nav 2 guide instructions
+sudo apt install ros-<ros2-distro>-joint-state-publisher-gui
+sudo apt install ros-<ros2-distro>-xacro
+
+## installing gazebo
+sudo apt install ros-<ros2-distro>-gazebo-ros-pkgs
+
+## robot localization 
+sudo apt install ros-<ros2-distro>-robot-localization
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> rosdev:latest is upto thisc
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
